@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="hexo,个人博客,blog,武宇浩">
+  <meta name="description" content="武宇浩的个人博客">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+  
+  <link rel="dns-prefetch" href="https://widget.daovoice.io">
+  <link rel="dns-prefetch" href="https://widget-static-cdn.daovoice.io">
+  <link rel="dns-prefetch" href="https://im.daovoice.io">
+  
+  
+  <link rel="dns-prefetch" href="https://hm.baidu.com/">
+  
+  
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://api.github.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  
+  <link rel="stylesheet" type="text/css" href="/./style/main.651055.css">
+	<link rel="shortcut icon" href="/img/favicon.ico" title="Favicon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<title>1、数据结构概念</title>
+  
+  <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?awwssw1snsnsnn1ndndnndnd99j";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();
+  </script>
+  
+  
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/7326e0b4.js","daovoice");daovoice('init',{app_id: "7326e0b4"});daovoice('update');
+  </script>
+  
+</head>
+<body>
+<canvas id="pattern-placeholder" height="230"></canvas>
+<div class="navbar-header">
+  <a class="blog-title" href="/">武宇浩的博客</a>
+  <a class="face-img" href="/">
+    <img src="https://wx2.sinaimg.cn/mw1024/006Gz2GWgy1fxp5nu8tokj30fw0fwaav.jpg">
+  </a>
+</div>
+<main>
+  <div class="article-title">
+    
+  
+  <h1 class="title">
+    1、数据结构概念
+  </h1>
+  
+
+
+    <ul class="article-info">
+      <li>
+        发布
+        <time datetime="2019-03-11T10:34:39.985Z" itemprop="datePublished">2019-03-11</time>
+      </li>
+      <li>
+        
+    更新 <time datetime="2019-03-11T13:40:54.199Z" itemprop="dateUpdated">2019-03-11</time>
+
+      </li>
+      <li id="busuanzi_container_page_pv">
+        阅读 <span id="busuanzi_value_page_pv"></span>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="article">
+      <div class="content">
+        <blockquote>
+<p>程序是为了具体的问题而存在的，现实生活中的问题涉及不同个体间的复杂联系，需要在计算机程序中描述生活中个体间的联系。数据结构主要研究非数值计算程序问题中的操作对象,以及它们之间的关系,而不是研究复杂的算法。</p>
+</blockquote>
+<h2 id="1、数据与数据元素"><a href="#1、数据与数据元素" class="headerlink" title="1、数据与数据元素"></a>1、数据与数据元素</h2><p><strong>数据</strong>： – 程序的操作对象，用于描述客观事物  (int a, int b,)    数据是一个抽象的概念，将其进行分类后得到程序设计语言中的类型。如：int，float，char等等<br><strong>数据元素</strong>：组成数据的基本单位<br><strong>数据项</strong>：一个数据元素由若干数据项组成<br><strong>数据对象</strong> – 性质相同的数据元素的集合   （比如：数组，链表）  </p>
+<p><strong>数据与数据元素、数据对象之间的关系</strong><br><img src="https://i.loli.net/2019/03/11/5c8625abd665c.png" alt="数据与数据元素之间的关系"></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> _<span class="title">MyTeacher</span>   //一种数据类型</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">char</span>	name[<span class="number">32</span>];</span><br><span class="line"><span class="keyword">char</span>	tile[<span class="number">32</span>];</span><br><span class="line"><span class="keyword">int</span>		age;</span><br><span class="line"><span class="keyword">char</span>	addr[<span class="number">128</span>];</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main21</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> _<span class="title">MyTeacher</span>  <span class="title">t1</span>;</span> <span class="comment">//数据元素</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> _<span class="title">MyTeacher</span> <span class="title">tArray</span>[30];</span> <span class="comment">//数据对象</span></span><br><span class="line"><span class="built_in">memset</span>(&amp;t1, <span class="number">0</span>, <span class="keyword">sizeof</span>(t1));</span><br><span class="line"><span class="built_in">strcpy</span>(t1.name, <span class="string">"name"</span>); <span class="comment">//数据项</span></span><br><span class="line"><span class="built_in">strcpy</span>(t1.addr, <span class="string">"addr"</span>); <span class="comment">//数据项</span></span><br><span class="line"><span class="built_in">strcpy</span>(t1.tile, <span class="string">"addr"</span>); <span class="comment">//数据项</span></span><br><span class="line">t1.age = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2、数据结构指：数据对象-中-数据元素之间的关系"><a href="#2、数据结构指：数据对象-中-数据元素之间的关系" class="headerlink" title="2、数据结构指：数据对象 中 数据元素之间的关系"></a>2、数据结构指：数据对象 中 数据元素之间的关系</h2><blockquote>
+<p>数据元素之间不是独立的,存在着特定关系,这些关系即是结构。</p>
+</blockquote>
+<h3 id="2-1数据的逻辑结构"><a href="#2-1数据的逻辑结构" class="headerlink" title="2.1数据的逻辑结构"></a>2.1数据的逻辑结构</h3><blockquote>
+<p>数据的逻辑结构：即从逻辑上描述数据之间的关系，他与数据的存储无关，是独立与计算机的.</p>
+</blockquote>
+<p>逻辑结构分为两类：    </p>
+<ul>
+<li><strong>线性结构：</strong> 线性表、栈、队列、串    </li>
+<li><strong>非线性结构：</strong>    树、图（或网络）</li>
+</ul>
+<p><img src="https://i.loli.net/2019/03/11/5c8628a02dd50.png" alt="数据与数据元素之间的关系"></p>
+<h3 id="2-2-数据的物理结构"><a href="#2-2-数据的物理结构" class="headerlink" title="2.2 数据的物理结构"></a>2.2 数据的物理结构</h3><blockquote>
+<p>数据的物理结构亦是存储结构，是数据的逻辑结构在计算机中存储器内的表示（或映像），它依赖于计算机。</p>
+</blockquote>
+<p>存储结构可分为四类：顺序、链式、索引、散列   </p>
+<ul>
+<li>顺序：借助元素在存储器中的相对位置来表示数据元素之间的逻辑关系。</li>
+<li>链式：借助指示元素存储地址的指针表示数据元素之间的关系。</li>
+<li>索引：</li>
+<li>散列：</li>
+</ul>
+<p><strong>数据的逻辑结构与存储结构密切相关</strong>   </p>
+<ul>
+<li>算法设计—-&gt;逻辑结构</li>
+<li>算法实现—-&gt;存储结构</li>
+</ul>
+<h2 id="3、算法"><a href="#3、算法" class="headerlink" title="3、算法"></a>3、算法</h2><h3 id="3-1算法的定义"><a href="#3-1算法的定义" class="headerlink" title="3.1算法的定义"></a>3.1算法的定义</h3><blockquote>
+<p>算法是特定问题求解步骤的描述<br>算法是独立存在的一种解决问题的方法和思想<br>对于算法而言，语言不重要，重要的是思想</p>
+</blockquote>
+<h3 id="3-2算法和数据结构的区别"><a href="#3-2算法和数据结构的区别" class="headerlink" title="3.2算法和数据结构的区别"></a><strong>3.2算法和数据结构的区别</strong></h3><ul>
+<li>数据结构是静态的描述数据元素之间的关系</li>
+<li>高效的程序需要在数据结构的基础上设计算法和选择算法</li>
+<li><strong>程序=数据结构+算法</strong>    </li>
+</ul>
+<p>总结：  </p>
+<ul>
+<li><strong>算法是为了解决实际问题而设计的</strong></li>
+<li><strong>数据结构是算法需要处理的问题载体</strong></li>
+</ul>
+<h3 id="3-3算法的特性（要素）"><a href="#3-3算法的特性（要素）" class="headerlink" title="3.3算法的特性（要素）"></a>3.3算法的特性（要素）</h3><p>输入 ：算法具有0个或多个输入<br>输出 ：算法至少有1个或多个输出<br>有穷性：算法在有限的步骤之后会自动结束而不会无限循环<br>确定性：算法中的每一步都有确定的含义，不会出现二义性<br>可行性：算法的每一步都是可行的</p>
+<h3 id="3-4算法效率的度量"><a href="#3-4算法效率的度量" class="headerlink" title="3.4算法效率的度量"></a><strong>3.4算法效率的度量</strong></h3><ul>
+<li>事后分析法：比较运行处理时间，虽然直观但实施困难且缺陷多。</li>
+<li>多采用事前分析估算法</li>
+</ul>
+<p>影响算法效率的主要因素：   </p>
+<ul>
+<li>算法采用的策略和方法   </li>
+<li>问题的输入规模   </li>
+<li>编译器所产生的代码  </li>
+<li>计算机执行速度     </li>
+</ul>
+<p><strong>事前分析估算法：</strong></p>
+<blockquote>
+<p>算法最终编译成具体的计算机指令，假设每个指令的在计算机上的运行速度固定，一个算法消耗的时间也就是每条语句的执行时间之和。而<strong>循环最深处的核心语句重复执行次数</strong>也就大致决定了算法的效率执行时间。</p>
+</blockquote>
+<p><strong>时间复杂度</strong>： <strong>大O表示法</strong></p>
+<blockquote>
+<p>操作次数的估算作为时间复杂度的度量</p>
+</blockquote>
+<ul>
+<li>要比较同一问题的不同算法：只需要找出<strong>基本的原操作</strong>，该基本操作重复的次数也就可以作为算法的时间度量。</li>
+<li>多数情况下它是循环最深处的语句中的原操作。</li>
+</ul>
+<p><strong>常见的时间复杂度</strong><br><img src="https://i.loli.net/2019/03/11/5c8635df8c95c.png" alt="常见的时间复杂度"></p>
+<p>注解：</p>
+<ul>
+<li>判断一个算法的效率时，往往只需要关注操作数量的最高次项，其它次要项和常数项可以忽略。</li>
+<li>在没有特殊说明时，我们所分析的算法的时间复杂度都是指最坏时间复杂度。</li>
+<li>在判断是首先关注操作次数的最高项</li>
+<li>O(5) = O(1)             </li>
+<li>O(2n + 1) = O(2n) = O(n)  </li>
+<li>O(n2+ n + 1) = O(n2)</li>
+<li>O(3n3+1) = O(3n3) = O(n3)</li>
+</ul>
+<p><strong>关系比较</strong><br><img src="https://i.loli.net/2019/03/11/5c86370946c70.png" alt="关系"></p>
+<p><strong>空间复杂度</strong>：</p>
+<blockquote>
+<p>主要取决于程序在运行时在计算机中临时占用的存储空间大小的度量，通过计算算法的存储空间实现。也可以使用大O表示法来表示当算法执行需要的存储空间是常数时，空间复杂度为O(1)。</p>
+</blockquote>
+<p><strong>空间与时间的策略</strong></p>
+<ul>
+<li>多数情况下，算法执行时所用的时间更令人关注</li>
+<li>如果有必要，可以通过增加空间复杂度来降低时间复杂度</li>
+<li>同理，也可以通过增加时间复杂度来降低空间复杂度</li>
+</ul>
+<p><strong>时间换空间案例</strong></p>
+<blockquote>
+<p>问题：在一个由自然数1-1000中某些数字所组成的数组中，每个数字可能出现零次或者多次。<br>    设计一个算法，找出出现次数最多的数字。</p>
+</blockquote>
+<ul>
+<li>方法1：排序找出出现次数最多的数字</li>
+<li>方法2：开辟一个数组空间，将每个数组出现的次数缓存下来在缓存的结果中求出最大值</li>
+</ul>
+<p><img src="https://i.loli.net/2019/03/11/5c863986a7534.png" alt="空间换时间"></p>
+
+      </div>
+        <div class="support-author">
+          <p>感谢您的阅读。 🙏
+          <!--a href="https://888.com/index.html" target="_blank">关于转载请看这里</a>-->
+            <!--<a class="btn-pay"  href="#pay-modal">¥ 打赏支持</a>-->
+          </p>
+        </div>
+        <!--
+            <div class="like ">
+              <div class="like-button">
+                <a id="like-note" href="">
+                  <i class="icon-heart"></i>喜欢
+                </a>
+              </div>
+              <span id="likes-count">256</span>
+            </div>
+        -->
+        <div class="otherLink">
+          <div class="previous">
+          </div>
+          <div class="next">
+          </div>
+        </div>
+        <div class="comments" id="comments">
+          
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  const gitalk = new Gitalk({
+    clientID: 'ed80ee1505cf20697d2b',
+    clientSecret: '3b191ff42c213bfd0a507148a19c58f1070fca36',
+    repo: 'why',
+    owner: 'wu787349049',
+    admin: ['wu787349049'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false
+  })
+
+  gitalk.render('comments');
+</script>
+
+
+        </div>
+      </div>
+    </div>
+   
+</main>
+<div class="footer">
+  <div class="info">
+    
+    <p style="font-size:15px">&copy;2018 
+	<img src="http://wyh.eu5.org/?/buffer/%E5%BF%83.png">
+	那些迷路者是希望迷路</p>
+	<p>
+	<!--<a href="#">一旦一个人在乎一件事，就会发现自己不得不开始在乎一切事。</a>-->
+    <!--<a href="https://hexo.io"> Hexo </a> 强力驱动 |-->
+    <!--<a href="https://github.com/Youthink/hexo-themes-yearn"> Yearn </a>主题-->
+    </p>
+  </div>
+</div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script type="text/javascript" src="/./js/main.651055.js"></script>
+
+</body>
+</html>
